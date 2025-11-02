@@ -16,10 +16,12 @@ export default function App() {
 function Sub1() {
   const theme = useContext(themeContext);
   return (
+    <themeContext.Provider>
     <div style={theme}>
       <h1>Sub1</h1>
       <Sub2 />
     </div>
+    </themeContext.Provider>
   )
 }
 
