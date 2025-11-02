@@ -6,11 +6,14 @@ const themeContext = createContext (themeDefault);
 export default function App() {
   const theme = useContext(themeContext);
   return (
+    <themeContext.Provider value={{ border: '10px solid blue' }}>
     <div className="root" style={theme}>
      <h1>Hello World</h1>
      <Sub1 />
     </div>
+    </themeContext.Provider>
   );
+  
 }
 
 function Sub1() {
