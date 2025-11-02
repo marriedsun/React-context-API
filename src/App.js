@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import './style.css';
-const themeDefault = {border: '10px solid green' };
+const themeDefault = {border: '10px solid red' };
 const themeContext = createContext (themeDefault);
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
 function Sub1() {
   const theme = useContext(themeContext);
   return (
-    <themeContext.Provider>
+    <themeContext.Provider value={{ border: '10px solid green' }}>
     <div style={theme}>
       <h1>Sub1</h1>
       <Sub2 />
